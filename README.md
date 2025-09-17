@@ -14,7 +14,7 @@ then run the script as root with
 sudo sh secureboot-nobara.sh
 ```
 ## Issues
-Please open an issue in {#issues}(https://github.com/degenerate-kun-69/nobara-secure-boot/issues) so i can find the fixes
+Please open an issue in [#issues](https://github.com/degenerate-kun-69/nobara-secure-boot/issues) so i can find the fixes
 
 ## Contributions
 Everyone is welcome to contribute. fork into this repository and open a pull request along with the description of any changes
