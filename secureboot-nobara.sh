@@ -84,6 +84,17 @@ else
     echo "No kernel images found in /boot/"
 fi
 
+# Replace 91-sbctl.install supplied by sbctl package with our own, as the logic used in their script is incompatible with the boot structure of nobara. Required to ensure newly installed versions of the kernel get signed with the keys we setup in this script.
+echo -e "\n=== Updating sbctl post-install scriptlet"
+cp 91-sbctl.install /usr/lib/kernel/install.d/
+echo -e "WARNING! As sbctl updates, our update to the post-install scriptlet will be"
+echo -e "replaced with the one supplied by the package. This will cause new versions"
+echo -e "of the kernel to go unsigned. To fix this, boot into a kernel that's already signed,"
+echo -e "and manually copy the file over yourself."
+echo -e "Open a terminal to the directory you placed nobara-secure-boot into,"
+echo -e "(default is /home/nobara-secure-boot) and execute the following command:"
+echo -e "sudo cp 91-sbctl.install /usr/lib/kernel/install.d/"
+
 # Final verify
 echo -e "\n=== Final sbctl verify ==="
 sbctl verify | grep -v "failed to verify file"
