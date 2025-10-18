@@ -15,7 +15,7 @@ then run the script as root with
 sudo sh secureboot-nobara.sh
 ```
 
-## Basic Troubleshooting:
+## Basic Troubleshooting
 "My kernels aren't getting signed anymore! I can only boot into an older version of the kernel that was signed as part of this script!"
 
 The package "sbctl" has probably been updated. Because we replaced a script supplied by the package with one of our own directly into a system directory, updating the package overwrote our custom script. Assuming you did not delete your git clone of this repo, you can fix this by opening a terminal to your nobara-secure-boot folder and running the following commands:
