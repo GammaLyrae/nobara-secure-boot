@@ -94,6 +94,7 @@ echo -e "and manually copy the file over yourself."
 echo -e "Open a terminal to the directory you placed nobara-secure-boot into,"
 echo -e "(default is /home/nobara-secure-boot) and execute the following command:"
 echo -e "sudo cp 91-sbctl.install /usr/lib/kernel/install.d/"
+echo -e "Then just run the script to make it sign the kernel(s)"
 
 # Final verify
 echo -e "\n=== Final sbctl verify ==="
